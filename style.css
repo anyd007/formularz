@@ -11,7 +11,8 @@
     margin: auto;
     align-items: center;
     transition: box-shadow 1s;
-    font-size: 30px;
+    transition: text-shadow 1s;
+    font-size: 33px;
     border-radius: 10px;
     z-index: 2;
     text-align: center;
@@ -26,8 +27,18 @@
 form:hover   {
     opacity: 0.8;
   box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 1.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-  
+  text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
 }
+
 button{
     width: 10%;
 text-align: center;
@@ -49,6 +60,7 @@ button:hover{
 
 h2{
     margin: 0;
+
 }
 p {
     margin-bottom: 10px;
@@ -76,4 +88,3 @@ margin-left: 82px;
     background:linear-gradient(90deg, rgba(3,2,13,1) 0%, rgba(8,8,46,1) 35%, rgba(1,27,32,1) 100%);;
     color: white;
 }
-
