@@ -10,8 +10,6 @@
     display: inline-block;
     margin: auto;
     align-items: center;
-    transition: box-shadow 1s;
-    transition: text-shadow 1s;
     font-size: 33px;
     border-radius: 10px;
     z-index: 2;
@@ -23,10 +21,15 @@
     left: 50%;
     transform: translateX(-50%);
 }
+form{
+    transition: box-shadow 1s,
+                text-shadow 1s;
+}
 
 form:hover   {
     opacity: 0.8;
   box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 1.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+
   text-shadow: 1px 1px 1px #919191,
         1px 2px 1px #919191,
         1px 3px 1px #919191,
@@ -84,7 +87,7 @@ margin-left: 82px;
     font-size: 22px;
     resize: none;
 }
-.dark-mode{
+/* .dark-mode{
     background:linear-gradient(90deg, rgba(3,2,13,1) 0%, rgba(8,8,46,1) 35%, rgba(1,27,32,1) 100%);;
     color: white;
-}
+} */

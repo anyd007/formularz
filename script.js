@@ -1,2 +1,2 @@
 
-const sendBtn = document.querySelector('.send-btn');
+// const sendBtn = document.querySelector('.send-btn');
