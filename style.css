@@ -55,7 +55,7 @@ margin-bottom: 10px;
 transition: box-shadow 1s;
 transition: background-color 1s;
 }
-button:hover{
+button:active{
     opacity: 0.8;
     box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 1.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
     background-color: crimson;
