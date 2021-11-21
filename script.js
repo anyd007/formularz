@@ -11,8 +11,24 @@ let nameLetters = /^[a-zA-Z\s]*$/; ///[^a-zA-Z\s]*$/ - oznacza wykluczenie wszys
 let nameEmail = /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
 
 const popupMain = document.createElement('div');
+const h2Popup = document.createElement('h3');
+const paraPopup = document.createElement('p');
+const popupBtn = document.createElement('button');
+
 popupMain.classList.add('popup')
-document.body.append(popupMain)
+document.body.append(popupMain);
+popupMain.append(h2Popup, paraPopup, popupBtn);
+
+h2Popup.textContent = 'udało się!'
+popupBtn.textContent = 'zamknij'
+
+
+h2Popup.style.fontSize = '50px'
+paraPopup.setAttribute('style', 'white-space: pre;')
+paraPopup.classList.add('popup-para')
+popupBtn.classList.add('popup-btn')
+h2Popup.classList.add('popup-h3')
+
 
 const sendListener = () => {
   warining.textContent = "";
@@ -34,9 +50,22 @@ inputName.style.backgroundColor = 'white';
        popupMain.style.display = 'flex'
        formMain.classList.add('blur');
        h1.classList.add('blur');
+       if(textera.value !== ''){
+       paraPopup.textContent = `dane które przekazałeś to:\r\n twoje imię: ${inputName.value}. twój adres e-mail to: ${inputEmail.value}.\r\n a twoja wiadomość ma treść: ${textera.value}`
+       } else{
+        paraPopup.textContent = `dane które przekazałeś to:\r\n twoje imię: ${inputName.value}. twój adres e-mail to: ${inputEmail.value}.\r\n niesterty nic do mnie nie napisałeś`
+
+       }
    }
   });
   
 };
 
 sendBtn.addEventListener("click", sendListener);
+popupBtn.addEventListener('click', ()=>{
+    popupMain.style.display = 'none'
+    formMain.classList.remove('blur');
+       h1.classList.remove('blur');
+       inputName.value = '';
+       inputEmail.value = '';
+})
